@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.EN
 {
-    internal class Mecha
+    public class Mecha
     {
 
         public int Id { get; set; }

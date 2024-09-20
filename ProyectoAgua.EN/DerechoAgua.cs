@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.EN
 {
-    internal class DerechoAgua
+    public class DerechoAgua
     {
 
         public int Id { get; set; }

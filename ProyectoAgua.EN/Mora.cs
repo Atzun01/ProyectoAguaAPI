@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.EN
 {
-    internal class Mora
+    public class Mora
     {
         public int Id { get; set; }
         public string MoraValue { get; set; }
