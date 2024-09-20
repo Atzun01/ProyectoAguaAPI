@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.DAL
 {
-    internal class DBContex
+    internal class ConsumoDAL
     {
     }
 }
