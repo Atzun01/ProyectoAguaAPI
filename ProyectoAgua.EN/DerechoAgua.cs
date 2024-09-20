@@ -13,10 +13,5 @@ namespace ProyectoAgua.EN
         public string Nombre { get; set; }
         public string Pasaje { get; set; }
         public string Casa { get; set; }
-
-        public ICollection<Consumo> Consumos { get; set; }
-        public ICollection<Mecha> Mechas { get; set; }
-        public ICollection<Mora> Moras { get; set; }
-        public ICollection<RegistroAgua> RegistroAguas { get; set; }
     }
 }
