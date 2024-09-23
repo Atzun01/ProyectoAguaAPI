@@ -1,8 +1,6 @@
 ﻿using ProyectoAgua.EN;
 using Microsoft.EntityFrameworkCore;
-
-
-
+using WaterProject.EN;
 
 namespace ProyectoAgua.DAL
 {
@@ -14,14 +12,14 @@ namespace ProyectoAgua.DAL
                 new MySqlServerVersion(new Version(8, 0, 0)));
         }
 
-        public DbSet<Consumo> Consumos { get; set; }
-        public DbSet<DerechoAgua> DerechoAguas { get; set; }
-        public DbSet<Empleado> Empleados { get; set; }
-        public DbSet<Mecha> Mechas { get; set; }
-        public DbSet<Mora> Moras { get; set; }
-        public DbSet<RegistroAgua> RegistroAguas { get; set; }
-        public DbSet<Rol> Roles { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Consumo> Consumo { get; set; }
+        public DbSet<DerechoAgua> DerechoAgua { get; set; }
+        public DbSet<Empleado> Empleado { get; set; }
+        public DbSet<Mecha> Mecha { get; set; }
+        public DbSet<Mora> Mora { get; set; }
+        public DbSet<RegistroAgua> RegistroAgua { get; set; }
+        public DbSet<Rol> Rol { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

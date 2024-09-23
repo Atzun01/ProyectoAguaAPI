@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProyectoAgua.EN;
+using WaterProject.EN;
 
 namespace ProyectoAgua.DAL
 {
@@ -33,7 +34,7 @@ namespace ProyectoAgua.DAL
             {
                 using (var dbContext = new DBContexto())
                 {
-                    var rol = await dbContext.Roles.FirstOrDefaultAsync(s => s.Id == pRol.Id);
+                    var rol = await dbContext.Rol.FirstOrDefaultAsync(s => s.Id == pRol.Id);
                     if (rol != null)
                     {
                         rol.Nombre = pRol.Nombre;
@@ -59,10 +60,10 @@ namespace ProyectoAgua.DAL
             {
                 using (var dbContext = new DBContexto())
                 {
-                    var rol = await dbContext.Roles.FirstOrDefaultAsync(s => s.Id == pRol.Id);
+                    var rol = await dbContext.Rol.FirstOrDefaultAsync(s => s.Id == pRol.Id);
                     if (rol != null)
                     {
-                        dbContext.Roles.Remove(rol);
+                        dbContext.Rol.Remove(rol);
                         result = await dbContext.SaveChangesAsync();
                     }
                     else
@@ -87,7 +88,7 @@ namespace ProyectoAgua.DAL
                 Rol rol = new Rol();
                 using (var dbContext = new DBContexto())
                 {
-                    rol = await dbContext.Roles.FirstOrDefaultAsync(s => s.Id == pRol.Id);
+                    rol = await dbContext.Rol.FirstOrDefaultAsync(s => s.Id == pRol.Id);
                 }
                 return rol;
             }
@@ -105,7 +106,7 @@ namespace ProyectoAgua.DAL
                 List<Rol> rol = new List<Rol>();
                 using (var dbContext = new DBContexto())
                 {
-                    rol = await dbContext.Roles.ToListAsync();
+                    rol = await dbContext.Rol.ToListAsync();
                 }
                 return rol;
             }
@@ -132,7 +133,7 @@ namespace ProyectoAgua.DAL
                 List<Rol> rol = new List<Rol>();
                 using(var dbContext = new DBContexto())
                 {
-                    var select =  dbContext.Roles.AsQueryable();
+                    var select =  dbContext.Rol.AsQueryable();
                     select = QuerySelect(select, pRol);
                     rol = await select.ToListAsync();
                 }
