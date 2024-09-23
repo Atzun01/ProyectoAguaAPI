@@ -18,6 +18,7 @@ namespace ProyectoAgua.DAL
             }
             catch (Exception ex)
             {
+                //comente
 
                 throw new Exception(ex.Message);
             }
