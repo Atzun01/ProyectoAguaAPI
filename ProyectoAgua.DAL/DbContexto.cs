@@ -1,6 +1,5 @@
 ﻿using ProyectoAgua.EN;
 using Microsoft.EntityFrameworkCore;
-using WaterProject.EN;
 
 namespace ProyectoAgua.DAL
 {
@@ -21,28 +20,28 @@ namespace ProyectoAgua.DAL
         public DbSet<Rol> Rol { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<DerechoAgua>()
-                .HasOne(d => d.Consumos)
-                .WithMany()
-                .HasForeignKey(d => d.Id);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<DerechoAgua>()
+        //        .HasOne(d => d.Consumos)
+        //        .WithMany()
+        //        .HasForeignKey(d => d.Id);
 
-            modelBuilder.Entity<DerechoAgua>()
-                .HasOne(d => d.Mechas)
-                .WithMany()
-                .HasForeignKey(d => d.Id);
+        //    modelBuilder.Entity<DerechoAgua>()
+        //        .HasOne(d => d.Mechas)
+        //        .WithMany()
+        //        .HasForeignKey(d => d.Id);
 
-            modelBuilder.Entity<DerechoAgua>()
-                .HasOne(d => d.Moras)
-                .WithMany()
-                .HasForeignKey(d => d.Id);
+        //    modelBuilder.Entity<DerechoAgua>()
+        //        .HasOne(d => d.Moras)
+        //        .WithMany()
+        //        .HasForeignKey(d => d.Id);
 
-            modelBuilder.Entity<DerechoAgua>()
-                .HasOne(d => d.RegistroAguas)
-                .WithMany()
-                .HasForeignKey(d => d.Id);
-        }
+        //    modelBuilder.Entity<DerechoAgua>()
+        //        .HasOne(d => d.RegistroAguas)
+        //        .WithMany()
+        //        .HasForeignKey(d => d.Id);
+        //}
 
 
     }
