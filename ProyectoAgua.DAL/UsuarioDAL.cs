@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
-using WaterProject.EN;
+using ProyectoAgua.EN;
 
 namespace ProyectoAgua.DAL;
 public class UsuarioDAL

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WaterProject.EN
+namespace ProyectoAgua.EN
 {
     public class Usuario
     {
