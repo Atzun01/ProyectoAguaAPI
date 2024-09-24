@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +10,16 @@ namespace ProyectoAgua.EN
 {
     public class Mora
     {
+        [Key]
         public int Id { get; set; }
-        public string MoraValue { get; set; }
-
-        public int? DerechoAguaId { get; set; }
+        [ForeignKey("DerechoAgua")]
+        [Required(ErrorMessage = "DerechoAgua es Obligatorio")]
+        [Display(Name = "DerechoAgua")]
+        public int IdDerechoAgua { get; set; }
+        [Required(ErrorMessage = "La CantidadMora es Obligatorio")]
+        public int CantidadMora { get; set; }
         public DerechoAgua DerechoAgua { get; set; }
+        [NotMapped]
+        public int Top_Aux { get; set; }
     }
 }
