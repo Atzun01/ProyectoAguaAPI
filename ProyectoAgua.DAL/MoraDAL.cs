@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.DAL
 {
-    internal class MoraDAL
+    public class MoraDAL
     {
         public static async Task<int> CrearAsync(Mora pMora)
         {

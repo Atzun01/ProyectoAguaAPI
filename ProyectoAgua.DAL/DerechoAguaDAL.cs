@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.DAL
 {
-    internal class DerechoAguaDAL
+    public class DerechoAguaDAL
     {
         public static async Task<int> CrearAsync(DerechoAgua pDerechoAgua)
         {

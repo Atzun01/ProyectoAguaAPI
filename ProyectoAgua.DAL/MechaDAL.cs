@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAgua.DAL
 {
-    internal class MechaDAL
+    public class MechaDAL
     {
         public static async Task<int> CrearAsync(Mecha pMecha)
         {

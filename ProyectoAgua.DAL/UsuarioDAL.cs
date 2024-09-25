@@ -131,7 +131,7 @@ public class UsuarioDAL
 
 
     }
-    public static async Task<List<Usuario>> ObtenerTodosasync()
+    public static async Task<List<Usuario>> ObtenerTodosAsync()
     {
         List<Usuario> usuarios = new List<Usuario>();
 
