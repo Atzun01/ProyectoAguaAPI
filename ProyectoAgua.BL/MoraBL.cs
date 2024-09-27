@@ -10,32 +10,32 @@ namespace ProyectoAgua.BL
 {
     public class MoraBL
     {
-        public static async Task<int> GuardarAsync(Mora  pMora)
+        public  async Task<int> GuardarAsync(Mora  pMora)
         {
             return await MoraDAL.CrearAsync(pMora);
         }
 
-        public static async Task<int> ModificarAsync(Mora pMora)
+        public  async Task<int> ModificarAsync(Mora pMora)
         {
             return await MoraDAL.ModificarAsync(pMora);
         }
 
-        public static async Task<int> EliminarAsync(Mora pMora)
+        public  async Task<int> EliminarAsync(Mora pMora)
         {
             return await MoraDAL.DeleteAsync(pMora);
         }
 
-        public static async Task<Mora> ObtenerPorIdAsync(Mora pMora)
+        public  async Task<Mora> ObtenerPorIdAsync(Mora pMora)
         {
             return await MoraDAL.ObtenerPorIdAsync(pMora);
         }
 
-        public static async Task<List<Mora>> ObtenerTodosAsync()
+        public  async Task<List<Mora>> ObtenerTodosAsync()
         {
             return await MoraDAL.ObtenerTodosAsync();
         }
 
-        public static async Task<List<Mora>> BuscarAsync(Mora pMora)
+        public  async Task<List<Mora>> BuscarAsync(Mora pMora)
         {
             return await MoraDAL.BuscarAsync(pMora);
         }
