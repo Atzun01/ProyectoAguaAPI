@@ -39,10 +39,12 @@ namespace ProyectoAguaAPI.Controller
                 DerechoAgua derechoAgua = JsonSerializer.Deserialize<DerechoAgua>(strDerechoAgua, option);
                 await derechoaguabl.GuardarAsync(derechoAgua);
                 return Ok();
+
+                ///Aqui da Error///::::////
             }
             catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex);
             }
         }
 
