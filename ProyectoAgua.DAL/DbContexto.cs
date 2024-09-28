@@ -7,7 +7,7 @@ namespace ProyectoAgua.DAL
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Server=localhost;Database=hotplaterestaurant;User=root;Password=password;",
+            optionsBuilder.UseMySql("Server=localhost;Database=proyectoagua_api;User=root;Password=1234;",
                 new MySqlServerVersion(new Version(8, 0, 0)));
         }
 
