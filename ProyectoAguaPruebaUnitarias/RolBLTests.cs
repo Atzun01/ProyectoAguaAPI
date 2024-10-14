@@ -65,9 +65,9 @@ namespace ProyectoAgua.BL.Tests
         {
             var rol = new Rol();
             rol.Nombre = "a";
-            rol.Top_Aux = 10;
+            rol.Top_Aux = 5;
             var resulRoles = await rolBL.BuscarRolesAsync(rol);
-            Assert.AreEqual(0, resulRoles.Count);
+            Assert.AreEqual(5, resulRoles.Count);
         }
     }
 
