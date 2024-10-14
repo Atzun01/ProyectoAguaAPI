@@ -7,62 +7,68 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//namespace ProyectoAgua.BL.Tests
-//{
-//    [TestClass()]
-//    public class RolBLTests
-//    {
-//        private static Rol rolinicial = new Rol { Id = 24 }; // Rol existente
-//        private RolBL rolBL = new RolBL();
+namespace ProyectoAgua.BL.Tests
+{
+    [TestClass()]
+    public class RolBLTests
+    {
+        private static Rol rolinicial = new Rol { Id = 9 }; // Rol existente
+        private RolBL rolBL = new RolBL();
 
-//        public async Task T1CrearAsyncTest()
-//        {
-//            var rol = new Rol();
-//            rol.Nombre = "Admin 3";
-//            int result = await rolBL.CrearRolAsync(rol);
-//            Assert.AreNotEqual(0, result);
-//        }
+        [TestMethod()]
+        public async Task T1CrearAsyncTest()
+        {
+            var rol = new Rol();
+            rol.Nombre = "AdminJose";
+            int result = await rolBL.CrearRolAsync(rol);
+            Assert.AreNotEqual(0, result);
+        }
 
-//        [TestMethod()]
-//        public async Task T2ModificarRolAsyncTest()
-//        {
-//            var rol = new Rol();
-//            rol.Id = rolinicial.Id;
-//            rol.Nombre = "Admin33";
-//            int result = await rolBL.ModificarRolAsync(rol);
-//            Assert.AreEqual(1, result);
+        [TestMethod()]
+        public async Task T2ModificarRolAsyncTest()
+        {
+            var rol = new Rol();
+            rol.Id = rolinicial.Id;
+            rol.Nombre = "AdminJose";
+            int result = await rolBL.ModificarRolAsync(rol);
+            Assert.AreEqual(1, result);
 
-//        }
+        }
 
-//        [TestMethod()]
-//        //public void EliminarRolAsyncTest()
-//        //{
-        //    var rol = Rol();
-        //    rol.Id = rolInicil.Id
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public async Task T3EliminarRolAsyncTest()
+        {
+            var rol = new Rol();
+            rol.Id = rolinicial.Id;
+            var result = await rolBL.EliminarRolAsync(rol);
+        Assert.AreNotEqual(0, result);
+    }
 
-        //[TestMethod()]
-        //public async void ObtenerRolPorIdAsyncTest()
-        //{
-        //    var rol = Rol();
-        //    rol.Id = rolinicial.Id;
-        //    var result = await rolBL.ModificarAsync(rol);
-        //    Assert.AreEqual(rol.Id, result.Id);
-        //}
+    [TestMethod()]
+    public async Task T4ObtenerRolPorIdAsyncTest()
+    {
+        var rol = new Rol();
+        rol.Id = rolinicial.Id;
+        var result = await rolBL.ObtenerRolPorIdAsync(rol.Id);
+        Assert.AreEqual(rol.Id, result.Id);
+    }
 
-        //[TestMethod()]
-        //public void ObtenerTodosRolesAsyncTest()
-        //{
-        //    var result =
-        //    Assert.Fail();
-        //}
+    [TestMethod()]
+    public async Task T5ObtenerTodosRolesAsyncTest()
+    {
+            var result = await rolBL.ObtenerTodosRolesAsync();
+        Assert.AreNotEqual(0, result.Count);
+    }
 
-    //    //[TestMethod()]
-    //    //public void BuscarRolesAsyncTest()
-    //    //{
-    //    //    Assert.Fail();
-    //    //}
-    //}
+        [TestMethod()]
+        public async Task T6BuscarRolesAsyncTest()
+        {
+            var rol = new Rol();
+            rol.Nombre = "a";
+            rol.Top_Aux = 10;
+            var resulRoles = await rolBL.BuscarRolesAsync(rol);
+            Assert.AreEqual(0, resulRoles.Count);
+        }
+    }
 
-//}
+}
