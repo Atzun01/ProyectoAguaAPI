@@ -10,7 +10,7 @@ namespace ProyectoAgua.BL
 {
     public  class DerechoAguaBL
     {
-        public  async Task<int> GuardarAsync(DerechoAgua pDerechoAgua)
+        public  async Task<int> CrearAsync(DerechoAgua pDerechoAgua)
         {
             return await DerechoAguaDAL.CrearAsync(pDerechoAgua);
         }
