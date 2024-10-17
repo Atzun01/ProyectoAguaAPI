@@ -29,8 +29,8 @@ namespace ProyectoAgua.DAL
             using (var dbContexto = new DBContexto())
             {
                 var mora = await dbContexto.Mora.FirstOrDefaultAsync(s => s.Id == pMora.Id);
-                mora.CantidadMora = pMora.CantidadMora;
-                dbContexto.Update(pMora);
+               mora.CantidadMora = pMora.CantidadMora;
+                dbContexto.Update(mora);
                 result = await dbContexto.SaveChangesAsync();
             }
             return result;

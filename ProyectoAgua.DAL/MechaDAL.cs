@@ -30,7 +30,7 @@ namespace ProyectoAgua.DAL
             {
                 var mecha = await dbContexto.Mecha.FirstOrDefaultAsync(s => s.Id == pMecha.Id);
                 mecha.CantidadMecha = pMecha.CantidadMecha;
-                dbContexto.Update(pMecha);
+                dbContexto.Update(mecha);
                 result = await dbContexto.SaveChangesAsync();
             }
             return result;
