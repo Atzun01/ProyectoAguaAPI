@@ -30,7 +30,7 @@ namespace ProyectoAgua.DAL
             {
                 var consumo = await dbContexto.Consumo.FirstOrDefaultAsync(s => s.Id == pConsumo.Id);
                 consumo.Mora = pConsumo.Mora;
-                dbContexto.Update(pConsumo);
+                dbContexto.Update(consumo);
                 result = await dbContexto.SaveChangesAsync();
             }
             return result;
@@ -97,14 +97,14 @@ namespace ProyectoAgua.DAL
         }
         public static async Task<List<Consumo>> BuscarIncluirDerechoAguaAsync(Consumo pConsumo)
         {
-            var consumo = new List<Consumo>();
+            var consumos = new List<Consumo>();
             using (var dbContexto = new DBContexto())
             {
                 var select = dbContexto.Consumo.AsQueryable();
                 select = QuerySelect(select, pConsumo).Include(s => s.DerechoAgua).AsQueryable();
-                consumo = await select.ToListAsync();
+                consumos = await select.ToListAsync();
             }
-            return consumo;
+            return consumos;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ProyectoAgua.EN
         [Required(ErrorMessage = "Pago es Obligatorio")]
         public int Pago { get; set; }
         [Required(ErrorMessage = "FechaPago es Obligatorio")]
-        public DateTime FechaPago { get; set; }
+        public new DateTime FechaPago { get; set; }
         public DerechoAgua DerechoAgua { get; set; }
 
         [NotMapped]

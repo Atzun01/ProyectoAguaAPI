@@ -29,7 +29,7 @@ namespace WaterProject.DAL
                 registroAgua.IdDerechoAgua = pRegistroAgua.IdDerechoAgua;
                 registroAgua.Pago = pRegistroAgua.Pago;
                 registroAgua.FechaPago = pRegistroAgua.FechaPago;
-                dbContexto.Update(pRegistroAgua);
+                dbContexto.Update(registroAgua);
                 result = await dbContexto.SaveChangesAsync();
             }
             return result;
